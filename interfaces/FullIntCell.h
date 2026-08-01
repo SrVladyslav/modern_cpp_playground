@@ -1,5 +1,5 @@
-#include <iostream>
-using namespace std;
+#ifndef FullIntCell_H
+#define FullIntCell_H
 
 /**
  * A class for simulating an integer memory cell
@@ -67,18 +67,4 @@ private:
     int storedValue;
 };
 
-int main()
-{
-    IntCell cell = IntCell(3);
-
-    std::cout << "Initial value: " << cell.read() << std::endl;
-    std::cout << "Initial value 1: " << cell.fast_assign << std::endl;
-
-    // Lets print a new hadcded value to the cell
-    cell.write(6);
-    cell.fast_assign = 6;
-    std::cout << "New value: " << cell.read() << std::endl;
-    std::cout << "New value 2: " << cell.fast_assign << std::endl;
-
-    return 0;
-}
+#endif
