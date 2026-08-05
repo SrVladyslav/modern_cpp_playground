@@ -115,4 +115,13 @@ public:
         std::swap(*this, copy);
         return *this;
     }
+
+    /**
+     * Move assignment (BigFive a = b;) using move-anmd-swap technique
+     */
+    BigFive &operator=(BigFive &&rValue)
+    {
+        std::swap(this->someData, rValue.someData);
+        return *this;
+    }
 };
